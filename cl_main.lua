@@ -135,7 +135,7 @@ CreateThread(function()
         
 
         for k,v in pairs(Cfg.badgeS) do
-            if #(GetEntityCoords(PlayerPedId()) - v.coords) < v.dist and ESX.GetPlayerData().job.name == v.jobName then
+            if #(GetEntityCoords(PlayerPedId()) - v.coords) < v.dist and ESX.GetPlayerData().job.name == v.jobName and ESX.GetPlayerData().job.grade == 'boss' then
                 wait = 0
                 HelpNotification(Cfg.Locales['badge_creator'], v.coords)
        
